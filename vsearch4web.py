@@ -5,6 +5,7 @@ app = Flask(__name__)
 """I change here something
 to do the first commit and push"""
 
+
 @app.route("/")
 def hello() -> str:
     return "Hello world from Flask!"
@@ -12,7 +13,7 @@ def hello() -> str:
 
 @app.route("/search4", methods=["POST"])
 def do_search() -> "html":
-    phrase =  request.form["phrase"]
+    phrase = request.form["phrase"]
     letters = request.form["letters"]
     return str(search4letters(phrase, letters))
 
